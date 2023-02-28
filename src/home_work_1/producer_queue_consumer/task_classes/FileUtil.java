@@ -1,4 +1,4 @@
-package main.java.concurrency;
+package home_work_1.producer_queue_consumer.task_classes;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -9,7 +9,7 @@ public class FileUtil {
     private final File logFile;
 
     public FileUtil(String fileName) {
-        logFile = new File("./src/main/resources/" + fileName);
+        logFile = new File("./src/home_work_1/producer_queue_consumer/" + fileName);
     }
 
     public void logSleepStatusInFile(String text) {
@@ -18,7 +18,6 @@ public class FileUtil {
             FileWriter fileWriter = new FileWriter(logFile, true);
             fileWriter.write(String.format("%s - %s - %s\n",
                     timestamp.getTime(), Thread.currentThread().getName(), text));
-            fileWriter.flush();
             fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();

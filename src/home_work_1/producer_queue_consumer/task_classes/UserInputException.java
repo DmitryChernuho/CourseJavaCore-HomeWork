@@ -1,4 +1,4 @@
-package main.java.concurrency;
+package home_work_1.producer_queue_consumer.task_classes;
 
 public class UserInputException extends RuntimeException {
     public UserInputException() {
