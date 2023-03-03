@@ -9,16 +9,14 @@ public class FileUtil {
     private final File logFile;
 
     public FileUtil(String fileName) {
-        logFile = new File("./src/home_work_1/producer_queue_consumer/" + fileName);
+        logFile = new File(FilesData.LOG_FILE_DIR.getFileData() + fileName);
     }
 
     public void logSleepStatusInFile(String text) {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        try {
-            FileWriter fileWriter = new FileWriter(logFile, true);
+        try (FileWriter fileWriter = new FileWriter(logFile, true)) {
             fileWriter.write(String.format("%s - %s - %s\n",
                     timestamp.getTime(), Thread.currentThread().getName(), text));
-            fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
