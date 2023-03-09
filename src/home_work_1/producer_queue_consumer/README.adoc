@@ -1,0 +1,18 @@
+= Concurrency.
+== Project 'Producer-Queue-Consumer'
+
+=== Specification of task 1, 2, 3
+Thread work is implemented in the `Producer` class.
+Recording and receiving the queue implemented in the `ThreadDataHelper` class
+
+=== Specification of task 4
+Custom exception is implemented in the `UserInputException` class
+
+=== Specification of task 5
+Thread work is implemented in the `Consumer` class
+
+=== Specification of task 6, 7
+Logs recording in the file implemented in the `FileUtil` class
+
+=== Specification of task 8, 9
+The ability to configure the required number of threads was added in the `Producer` class
